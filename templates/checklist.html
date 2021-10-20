@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>小清单</title>
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="../static/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/list.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <div class="container-fluid mb-5 p-4 bg-primary text-white text-center">
+    <div class="float-md-end dropdown">
+      <a id="userdrop" href="#" class="text-white dropdown-toggle" data-bs-toggle="dropdown" style="text-decoration : none">
+        
+      </a>
+      <ul class="dropdown-menu" >
+        <a id="exit" class="dropdown-item " href="#">退出</a>
+      </ul>
+    </div>
+      <h2 class=" display-5 ">小清单</h2>
+  </div>
+  <div class="card container ">
+    <div class="card-body">
+      <form class="d-flex px-5 mb-4">
+        <input id="inputlist" class="form-control  me-3 ms-5" type="text" placeholder="添加一个任务">
+        <button id="addlist" class="btn btn-primary rounded-circle" type="button"><i class="bi bi-plus"></i></button>
+      </form>
+      <ul id="todolist" class="list-group">
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
