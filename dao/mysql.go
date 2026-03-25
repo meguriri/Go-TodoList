@@ -98,7 +98,6 @@ func IsUserExsit(user *User) bool {
 	row := MysqlDb.QueryRow("SELECT count(*) FROM user where name=? limit 1", user.Name)
 	var a int
 	row.Scan(&a)
-	fmt.Println(a)
 	if a == 0 {
 		return true
 	} else if a == 1 {
