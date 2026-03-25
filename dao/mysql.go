@@ -109,12 +109,12 @@ func IsUserExsit(user *User) bool {
 
 func CreatNewUser(user *User) (bool, int64, error) {
 	r, err := MysqlDb.Exec("insert into user (name,password)values(?,?)", user.Name, user.Password)
-	id, _ := r.LastInsertId()
 	if err != nil {
 		fmt.Println("exec failed", err)
-		return false, id, err
+		return false, -1, err
 	} else {
 		fmt.Println("exec success!!!")
-		return true, 0, nil
+		id, _ := r.LastInsertId()
+		return true, id, nil
 	}
 }
